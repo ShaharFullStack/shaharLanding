@@ -971,7 +971,7 @@
                 camera.position.z = THREE.MathUtils.lerp(baseCameraZ, zoomedCameraZ, stageProgress);
                 camera.position.x = THREE.MathUtils.lerp(baseCameraX, offsetCameraX, stageProgress);
 
-                particles.visible = stageProgress < 0.5;
+                particles.visible = false;  // No particles in stage 1, wireframe only
                 wireframeMesh.visible = true;
                 fullMesh.visible = false;
                 composer.passes[1].strength = 0;
